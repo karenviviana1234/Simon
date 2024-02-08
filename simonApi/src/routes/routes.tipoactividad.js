@@ -3,11 +3,11 @@ import { actualizartipo, creartipo, eliminartipo, listartipo, mostartipo } from 
 
 
 
-const router = Router()
-router.get("/tipo_actividad", listartipo)
-router.post("/tipo_actividad", creartipo)
-router.put("/tipo_actividad/:id_tipo_actividad", actualizartipo)
-router.get("/tipo_actividad/:id_tipo_actividad", mostartipo)
-router.delete("/tipo_actividad/:id_tipo_actividad", eliminartipo)
+const rutaTipoActi = Router()
+rutaTipoActi.get("/tipo_actividad", listartipo)
+rutaTipoActi.post("/tipo_actividad", creartipo)
+rutaTipoActi.put("/tipo_actividad/:id_tipo_actividad", actualizartipo)
+rutaTipoActi.get("/tipo_actividad/:id_tipo_actividad", mostartipo)
+rutaTipoActi.delete("/tipo_actividad/:id_tipo_actividad", eliminartipo)
 
-export default router
+export default rutaTipoActi;

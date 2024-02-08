@@ -3,11 +3,11 @@ import { actualizarcostos, crearcostos, eliminarcostos, listarcostos, mostarcost
 
 
 
-const router = Router()
-router.get("/costos", listarcostos)
-router.post("/costos", crearcostos)
-router.put("/costos/:id_productos", actualizarcostos)
-router.get("/costos/:id_productos", mostarcostos)
-router.delete("/costos/:id_productos", eliminarcostos)
+const rutaCostos = Router()
+rutaCostos.get("/costos", listarcostos)
+rutaCostos.post("/costos", crearcostos)
+rutaCostos.put("/costos/:id_productos", actualizarcostos)
+rutaCostos.get("/costos/:id_productos", mostarcostos)
+rutaCostos.delete("/costos/:id_productos", eliminarcostos)
 
-export default router
+export default rutaCostos;

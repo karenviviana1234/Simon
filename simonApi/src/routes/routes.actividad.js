@@ -3,11 +3,11 @@ import { actualizaractividades, crearactividades, eliminaractividades, listaract
 
 
 
-const router = Router()
-router.get("/actividades", listaractividades)
-router.post("/actividades", crearactividades)
-router.put("/actividades/:id_actividades", actualizaractividades)
-router.get("/actividades/:id_actividades", mostaractividades)
-router.delete("/actividades/:id_actividades", eliminaractividades)
+const rutaActividad = Router()
+rutaActividad.get("/actividades", listaractividades)
+rutaActividad.post("/actividades", crearactividades)
+rutaActividad.put("/actividades/:id_actividades", actualizaractividades)
+rutaActividad.get("/actividades/:id_actividades", mostaractividades)
+rutaActividad.delete("/actividades/:id_actividades", eliminaractividades)
 
-export default router
+export default rutaActividad;
