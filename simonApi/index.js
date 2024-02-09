@@ -5,16 +5,17 @@ import rutaCostos  from "./src/routes/routes.costos.js";
 import  rutaTipoActi   from "./src/routes/routes.tipoactividad.js";
 
 const servidor = express();
+const port = 3333
 
 servidor.use(bodyParser.json());
 servidor.use(bodyParser.urlencoded({extended:false}));
 
 //rutas
 
-servidor.use ('/actividad', rutaActividad);
-servidor.use ('/costos', rutaCostos);
-servidor.use ('/tipoactivi', rutaTipoActi);
+servidor.use ( rutaActividad);
+servidor.use ( rutaCostos);
+servidor.use (rutaTipoActi);
 
-servidor.listen(4000,()=>{
-    console.log('Sirve el puerto 4000')
+servidor.listen(port,()=>{
+    console.log('Sirve el puerto 3333')
 })

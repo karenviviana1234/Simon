@@ -5,8 +5,8 @@ import { actualizaractividades, crearactividades, eliminaractividades, listaract
 
 const rutaActividad = Router()
 
-rutaActividad.get("/listar", listaractividades)
-rutaActividad.post("/crear", crearactividades)
+rutaActividad.get("/actividad", listaractividades)
+rutaActividad.post("/actividad", crearactividades)
 rutaActividad.put("/actividad/:id_actividades", actualizaractividades)
 rutaActividad.get("/actividad/:id_actividades", mostaractividades)
 rutaActividad.delete("/actividad/:id_actividades", eliminaractividades)

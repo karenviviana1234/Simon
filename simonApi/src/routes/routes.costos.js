@@ -4,7 +4,7 @@ import { actualizarcostos, crearcostos, eliminarcostos, listarcostos, mostarcost
 
 
 const rutaCostos = Router()
-rutaCostos.get("/listar", listarcostos)
+rutaCostos.get("/costos", listarcostos)
 rutaCostos.post("/costos", crearcostos)
 rutaCostos.put("/costos/:id_productos", actualizarcostos)
 rutaCostos.get("/costos/:id_productos", mostarcostos)
