@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { actualizartipo, creartipo, eliminartipo, listartipo, mostartipo } from "../controllers/controller.tipoactividad.js";
+import { actualizartipo, creartipo, eliminartipo, listartipo, mostartipo } from "../controller/controller.tipoactividad.js";
 
 
 

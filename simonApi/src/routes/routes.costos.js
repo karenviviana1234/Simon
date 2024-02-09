@@ -1,10 +1,10 @@
 import { Router } from "express";
-import { actualizarcostos, crearcostos, eliminarcostos, listarcostos, mostarcostos } from "../controllers/controller.costos.js";
+import { actualizarcostos, crearcostos, eliminarcostos, listarcostos, mostarcostos } from "../controller/controller.costos.js";
 
 
 
 const rutaCostos = Router()
-rutaCostos.get("/costos", listarcostos)
+rutaCostos.get("/listar", listarcostos)
 rutaCostos.post("/costos", crearcostos)
 rutaCostos.put("/costos/:id_productos", actualizarcostos)
 rutaCostos.get("/costos/:id_productos", mostarcostos)

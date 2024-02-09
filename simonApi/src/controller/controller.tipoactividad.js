@@ -1,4 +1,4 @@
-import { pool } from "../database/conexion.js"
+import { pool } from "../database/Conexion.js"
 
 export const listartipo = async (req, res) =>{
     try{
@@ -8,13 +8,13 @@ export const listartipo = async (req, res) =>{
             res.status(200).json(resultado)
         }else {
             res.status(404).json({
-                "mensaje": "no se pudo mostar hay algun error"
+                "menssage": "no se pudo mostar hay algun error"
             })
         }
 
     }catch(error){
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }
 }
@@ -26,16 +26,16 @@ export const creartipo = async (req, res) => {
 
         if (resultado.affectedRows > 0) {
             res.status(200).json({
-                "mensaje": "costo puesta con exito"
+                "menssage": "costo puesta con exito"
             })
         } else {
             res.status(400).json({
-                "mensaje": "hay un error no se pudo guardar"
+                "menssage": "hay un error no se pudo guardar"
             })
         }
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }   
 }
@@ -49,17 +49,17 @@ export const actualizartipo = async (req,res) => {
 
         if (resultado.aproductosRows > 0) {
             res.status(200).json({
-                "mensaje": "las tipo_actividad ha sido actualizado"
+                "menssage": "las tipo_actividad ha sido actualizado"
             })
         } else {
             productostus(404).json({
-                "mensaje": "No se pudo actualizar las tipo_actividad"
+                "menssage": "No se pudo actualizar las tipo_actividad"
             })
         }
 
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }   
 }
@@ -73,13 +73,13 @@ export const mostartipo = async (req, res) => {
             res.status(200).json(resultado)
         } else {
             res.status(400).json({
-                "mensaje": "No se encontró ese tipo_actividad con ese ID"
+                "menssage": "No se encontró ese tipo_actividad con ese ID"
             })
         }
 
     }  catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })     
     }
 }
@@ -91,16 +91,16 @@ export const eliminartipo = async (req, res) => {
 
         if (resultado.affectedRows > 0) {
             res.status(200).json({
-                "mensaje": "Haz eliminado con exito las tipo_actividad"
+                "menssage": "Haz eliminado con exito las tipo_actividad"
             })
         } else {
             res.status(404).json({
-                "mensaje": "No se encontró esas tipo_actividad con ese ID y no se puedo eliminar"
+                "menssage": "No se encontró esas tipo_actividad con ese ID y no se puedo eliminar"
             })
         }
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }
 }

@@ -1,20 +1,20 @@
-import { pool } from "../database/conexion.js"
+import { pool } from "../database/Conexion.js"
 
 export const listarcostos = async (req, res) =>{
     try{
-        const [resultado] = await pool.query("select * from costos")
+        const [resultado] = await pool.query("SELECT * FROM costos")
 
-        if (resultado.length > 0){
-            res.status(200).json(resultado)
-        }else {
+        if (resultado.length>0){
+            return res.status(200).json(resultado[0]);
+            }else {
             res.status(404).json({
-                "mensaje": "no se pudo mostar hay algun error"
+                "menssage": "no se pudo mostar hay algun error"
             })
         }
 
     }catch(error){
         res.status(500).json({
-            "mensaje": error
+            "menssage": "Error en el sistema",error
         })
     }
 }
@@ -26,16 +26,16 @@ export const crearcostos = async (req, res) => {
 
         if (resultado.affectedRows > 0) {
             res.status(200).json({
-                "mensaje": "costo puesta con exito"
+                "menssage": "costo puesta con exito"
             })
         } else {
             res.status(400).json({
-                "mensaje": "hay un error no se pudo guardar"
+                "menssage": "hay un error no se pudo guardar"
             })
         }
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }   
 }
@@ -49,17 +49,17 @@ export const actualizarcostos = async (req,res) => {
 
         if (resultado.aproductosRows > 0) {
             res.status(200).json({
-                "mensaje": "las costos ha sido actualizado"
+                "menssage": "las costos ha sido actualizado"
             })
         } else {
             productostus(404).json({
-                "mensaje": "No se pudo actualizar las costos"
+                "menssage": "No se pudo actualizar las costos"
             })
         }
 
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }   
 }
@@ -73,13 +73,13 @@ export const mostarcostos = async (req, res) => {
             res.status(200).json(resultado)
         } else {
             res.status(400).json({
-                "mensaje": "No se encontró ese costos con ese ID"
+                "menssage": "No se encontró ese costos con ese ID"
             })
         }
 
     }  catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })     
     }
 }
@@ -91,16 +91,16 @@ export const eliminarcostos = async (req, res) => {
 
         if (resultado.affectedRows > 0) {
             res.status(200).json({
-                "mensaje": "Haz eliminado con exito las costos"
+                "menssage": "Haz eliminado con exito las costos"
             })
         } else {
             res.status(404).json({
-                "mensaje": "No se encontró esas costos con ese ID y no se puedo eliminar"
+                "menssage": "No se encontró esas costos con ese ID y no se puedo eliminar"
             })
         }
     } catch (error) {
         res.status(500).json({
-            "mensaje": error
+            "menssage": error
         })
     }
 }

@@ -6,6 +6,6 @@ export const pool = createPool(
         user:'root',
         password:'',
         port: 4000,
-        database:'Simon'
+        database:'simon'
     }
 );
