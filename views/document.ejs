@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de la Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Documentación de la Api</h1>
+    <div class="container">
+      <h2>Requerimiento 1 Documentación del ENDPOINT usuarios</h2>
+      <div class="row">
+        <!-- Columna  1 -->
+        <div class="col-md-6 columna-uno">
+          <!-- Tabla Listar Usuarios -->
+          <table class="table table-hover table-success table-striped-columns">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th colspan="2">Lista</th>
+                <th scope="col">Manejo</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td colspan="3">Numero 1</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td colspan="2">Nombre del servicio</td>
+                <td>Listar Usuarios</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">URL</td>
+                <td>http://localhost:3000/listarUsuario</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td colspan="2">Metodo</td>
+                <td>Get</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td colspan="2">Descripción</td>
+                <td>Permite listar los usuarios registrados en la base de datos</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td colspan="2">Petición body</td>
+                <td>{
+                      "id_ususario": 6,
+                    }
+                </td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td colspan="2">Respuesta Correcta json</td>
+                  <td>status: 200 OK
+                    {
+                      "id_ususario": 6,
+                      "tipo_identificacion": "cedula",
+                      "numero_identifi": 1234567890,
+                      "nombre_usuari": "pepe",
+                      "numero_telefono": 3190653000,
+                      "email": "pepe@gmail.com",
+                      "direccion_usuario": "carrera 11 # 15 sur"
+                    }
+                  </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td colspan="2">Respuesta Incorrecta json</td>
+                    <td>404 Not Found
+                      {
+                        "status": 404,
+                        "message": "El usuario no esta registrado"
+                      }
+                      Error:
+                        status: 500 Internal Server Error
+                        {
+                          "status":  500,
+                          "message": "Descripción del error"
+                        }                        
+                    </td>
+                  </tr>
+            </tbody>
+          </table>
+          <!-- Tabla Registrar Usuarios -->
+          <table class="table table-hover table-success table-striped-columns">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th colspan="2">Lista</th>
+                <th scope="col">Manejo</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td colspan="3">Numero 2</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td colspan="2">Nombre del servicio</td>
+                <td>Registrar Usuarios</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">URL</td>
+                <td>http://localhost:3000/registrarUsuario</td>      
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td colspan="2">Metodo</td>
+                <td>Post</td>             
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td colspan="2">Descripción</td>
+                <td>Permite Registrar los usuarios registrados en la base de datos</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td colspan="2">Petición body</td>
+                <td>{
+                  "tipo_identificacion": "",
+                  "numero_identifi": ,
+                  "nombre_usuari": "",
+                  "numero_telefono": ,
+                  "email": "",
+                  "direccion_usuario": ""            
+                    }
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td colspan="2">Respuesta Correcta json</td>
+                <td>{
+                  "status": 200,
+                  "message": "Se registró con exito el usuario nombre del usuario"
+                }
+                  </td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td colspan="2">Respuesta Incorrecta json</td>
+                <td>Status: 404 Not Found
+                  {
+                    "status": 404,
+                    "mensaje": "No se registró el usuario"
+                  }
+                  Error:
+                  status: 500 Internal Server Error
+                  {
+                    "status":  500,
+                    "message": "Descripción del error"
+                  }                  
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Columna  2 -->
+        <div class="col-md-6">
+          <!-- Tabla Actualizar Usuarios -->
+          <table class="table table-hover table-success table-striped-columns">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th colspan="2">Lista</th>
+                <th scope="col">Manejo</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td colspan="3">Numero 3</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td colspan="2">Nombre del servicio</td>
+                <td>Actualizar Usuario</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">URL</td>
+                <td>http://localhost:3000/actualizarUsuario/</td>      
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td colspan="2">Metodo</td>
+                <td>Put</td>             
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td colspan="2">Descripción</td>
+                <td>Permite Actualizar el usuario registrado en la base de datos</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td colspan="2">Petición body</td>
+                <td>{
+                  "tipo_identificacion": "",
+                  "numero_identifi": ,
+                  "nombre_usuari": "",
+                  "numero_telefono": ,
+                  "email": "",
+                  "direccion_usuario": ""            
+                    }
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td colspan="2">Respuesta Correcta json</td>
+                <td>{
+                  "mensaje": "El usuario ha sido actualizado."
+                    } 
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td colspan="2">Respuesta Incorrecta json</td>
+                <td>Status: 404 Not Found
+                  {
+                    "status": 404,
+                    "mensaje": "No se pudo actualizar el usuario, inténtalo de nuevo."
+                  }
+                  Error:
+                  status: 500 Internal Server Error
+                  {
+                    "status": 500,
+                    "message": {}
+                  }
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Tabla Eliminar Usuarios -->
+          <table class="table table-hover table-success table-striped-columns">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th colspan="2">Lista</th>
+                <th scope="col">Manejo</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr>
+                <th scope="row">1</th>
+                <td colspan="3">Numero 4</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td colspan="2">Nombre del servicio</td>
+                <td>Elimianr Usuario</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">URL</td>
+                <td>http://localhost:3000/eliminarUsuario/</td>      
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td colspan="2">Metodo</td>
+                <td>Delete</td>             
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td colspan="2">Descripción</td>
+                <td>Permite Eliminar un usuario registrado en la base de datos</td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td colspan="2">Petición body</td>
+                <td>
+                  http://localhost:3000/eliminarUsuario/id_ususario
+                  (id del usuario)
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">7</th>
+                <td colspan="2">Respuesta Correcta json</td>
+                <td>Status: 200 OK
+                  {
+                    "mensaje": "El usuario con el id number ha sido eliminado."
+                  }
+                  </td>
+              </tr>
+              <tr>
+                <th scope="row">8</th>
+                <td colspan="2">Respuesta Incorrecta json</td>
+                <td>Status: 404 Not Found
+                  {
+                    "status": 404,
+                    "mensaje": "No se pudo eliminar el usuario"
+                  }
+                  Error:
+                  status: 500 Internal Server Error
+                    {
+                      "status": 500,
+                      "message": "Descripción del error" 
+                    }
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <hr>
+    <h2>Requerimiento 1 Documentación del ENDPOINT USUARIO</h2>
+    <table>
+     <tr><td>NUMERO</td><td>1</td></tr>
+     <tr><td>NOMBRE DEL SERVICIO</td><td>Listar Usuarios</td></tr>
+     <tr><td>URI</td><td>/usuarios/listar</td></tr>
+     <tr><td>DESCRIPCIÓN</td><td>Permite listar los usuarios registrados en a base de datos</td></tr>
+     <tr><td>VERBO HTTP</td><td>GET</td></tr>
+     <tr><td>HEADER</td><td>NULL</td></tr>
+     <tr><td>USUARIOS</td><td>Administrador</td></tr>
+     <tr><td>PETICIÓN BODY</td><td>{nombre: 'Juanito'}</td></tr>
+     <tr><td>RESPUESTA JSON</td><td>
+        Correcto:
+        Status: 200
+        json:
+        {
+        "idUsuario": 3,
+        "nombres": "kevin",
+        "direccion": "cr19n6-04",
+        "telefono": "3193103884",
+        "correo": "olave123@gmail.com",
+        "rol": "usuario",
+        "password": "1245"
+    }
+    Incorrecto:
+    status: 404
+    body: {
+        status: 404,
+        mesasage: "No se encontro usuarios registrados"
+    }
+    Error:
+    status: 500,
+    body {
+        status: 500,
+        message: "Error en el sistema" +Error
+    }
+</td></tr>
+    </table> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

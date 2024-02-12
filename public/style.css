@@ -1,0 +1,24 @@
+body {
+background-color: burlywood;
+}
+/* Estilos generales */
+.columna-uno {
+    margin-bottom: 100px;
+}
+/* Estilos para los encabezados */
+h1 {
+    color: #333;
+    text-align: center;
+}
+  
+h2 {
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+/* Estilos para la respuesta JSON */
+table  {
+    white-space: pre-line; /* importante */
+  }
